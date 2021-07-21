@@ -1,0 +1,12 @@
+<h3> <%=line_item.product.name%>  </h3>
+<ul>
+  <li>
+    <img src=<%= line_item.product.image%>>
+  </li>
+  <li>
+    <%=line_item.product.description%>
+  </li>
+  <li>
+    x<%= line_item.quantity%> for <%= humanized_money_with_symbol line_item.total_price_cents%>
+  </li>
+</ul>
