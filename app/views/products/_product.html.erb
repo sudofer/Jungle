@@ -2,7 +2,9 @@
   <header>
     <%= link_to product do %>
     <%if product.quantity < 1%>
-      <span class="badge badge-warning">SOLD OUT</span>
+      <aside class="sold_out">
+    SOLD OUT
+  </aside>
     <%end%>
       <%= image_tag product.image.thumb, alt: product.name %>
       <h4><%= product.name %></h4>

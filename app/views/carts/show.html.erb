@@ -3,7 +3,14 @@
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
-
+  <% if enhanced_cart.length() == 0%>
+  
+    <div class="alert alert-warning alert-dismissible show" role="alert">
+  <strong>No items in cart!</strong> You should check out our poducts on our home page!
+</div>
+    <a class="btn btn-primary" href="/" role="button">Take me home!</a>
+ 
+  <%else%>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -48,6 +55,6 @@
       <% end %>
     </div>
   </div>
-
+  <%end%>
 </section>
 

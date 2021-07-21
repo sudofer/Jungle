@@ -38,15 +38,12 @@
             <li><%= link_to 'Products',  [:admin, :products] %></li>
           </ul>
         </li>
-        <% if cart.any? %>
           <li>
             <%= link_to cart_path do %>
               <%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)
-            <% end %>
+              <% end %>
           </li>
-        <%else%>
-          <p class ="alert">No items!</p><a href="/" class="alert">Take me home!</a>
-        <%end%>
+
       </ul>
     </div>
   </div>
