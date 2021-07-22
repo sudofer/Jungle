@@ -1,0 +1,14 @@
+<section class="admin-products-index">
+
+
+<div class="well">
+    <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
+  </div>
+
+  <p>
+    <%@categories.each do | x | %>
+    <p> <%= x.name %> </p>
+    <% end%>
+  </p>
+
+</section>
