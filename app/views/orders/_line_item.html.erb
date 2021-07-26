@@ -1,12 +1,18 @@
-<h3> <%=line_item.product.name%>  </h3>
-<ul>
-  <li>
-    <img src=<%= line_item.product.image%>>
-  </li>
-  <li>
-    <%=line_item.product.description%>
-  </li>
-  <li>
-    x<%= line_item.quantity%> for <%= humanized_money_with_symbol line_item.total_price_cents%>
-  </li>
-</ul>
+
+
+<tr>
+  <td>
+    <%= image_tag line_item.product.image.tiny %>
+  </td>
+  <td>
+    <h4><%= line_item.product.name %></h4>
+    <br>
+    <p><%= line_item.product.description %></p>
+  </td>
+  <td>
+    <%= humanized_money_with_symbol line_item.product.price %>
+  </td>
+  <td>
+    <%= humanized_money_with_symbol line_item.total_price_cents * line_item.quantity %>
+  </td>
+</tr>
